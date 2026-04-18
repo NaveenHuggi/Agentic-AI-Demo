@@ -1,0 +1,57 @@
+# System Files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environments
+venv/
+.venv/
+env/
+.env_venv/
+
+# Environment Variables & Secrets
+# NEVER COMMIT API KEYS
+.env
+.env.local
+.env.*.local
+credentials.json
+token.json
+API-keys.txt
+
+# Databases & Agent Memory
+# Ignore ChromaDB vector stores and local agent memories so users start fresh
+.chroma_db/
+episodic_memory.json
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Scratch / Test files
+test_*.py
+list_models.py
+scratch/

@@ -1,0 +1,39 @@
+# ══════════════════════════════════════════════════════════════
+# USER PREFERENCES & RULES (for RAG Demo 2B)
+# ══════════════════════════════════════════════════════════════
+# This file simulates private enterprise data that the LLM was
+# NEVER trained on.  The RAG system will ingest this file into
+# a vector database so the agent can look up these rules before
+# making decisions.
+# ══════════════════════════════════════════════════════════════
+
+## Scheduling Rules
+- Do NOT schedule any meetings before 10:00 AM. I am not a morning person.
+- Do NOT schedule any meetings after 6:00 PM. That is personal time.
+- Keep Fridays completely free for deep focus work. No meetings on Fridays.
+- Default meeting duration should be 30 minutes unless the email explicitly states otherwise.
+- Always keep a 15-minute buffer between consecutive meetings.
+- Prefer afternoon slots (2:00 PM – 5:00 PM) for team sync-ups.
+
+## Priority Rules
+- Emails from my manager Priya Sharma (priya.sharma@company.com) are always HIGH priority.
+- Emails from HR (hr@company.com) about policy changes are MEDIUM priority.
+- Newsletters and promotional emails are LOW priority. Ignore them.
+- Any email with "deadline" or "urgent" in the subject is automatically HIGH priority.
+
+## Communication Preferences
+- Always reply in a professional but friendly tone.
+- Keep email replies under 100 words unless the situation requires detail.
+- For meeting invites, always confirm the time and attendees in the reply.
+- If declining a meeting, suggest two alternative time slots.
+- CC my manager on all project-related meeting confirmations.
+
+## Project Context
+- Current project: Agentic AI Hackathon (deadline: April 30, 2026)
+- Team members: Akshat, Priya Sharma, Rahul Kumar, Sneha Patel
+- Akshat's email: akshat@company.com
+- Stakeholder reviews happen every Wednesday at 3:00 PM.
+
+## Auto-Reply Rules
+- If I receive a meeting request while I'm in another meeting, auto-reply with "I'll review and confirm shortly."
+- If an email asks for a document I don't have, reply with "Let me check and get back to you by EOD."

@@ -1,0 +1,35 @@
+# ============================================================
+# Inbox Intelligence Agent — Dependencies
+# ============================================================
+# Install everything at once:   pip install -r requirements.txt
+# ============================================================
+
+# --- Core Web Server ---
+fastapi
+uvicorn[standard]
+python-dotenv
+
+# --- Google Workspace APIs (Gmail + Calendar) ---
+google-auth
+google-auth-oauthlib
+google-api-python-client
+
+# --- LLM (Session 1+) ---
+google-generativeai
+
+# --- LangChain (Session 2+) ---
+langchain
+langchain-google-genai
+langchain-community
+langchain-text-splitters
+
+# --- RAG / Vector Store (Session 2B) ---
+langchain-chroma
+chromadb
+
+# --- MCP (Session 2C) ---
+mcp[cli]
+langchain-mcp-adapters
+
+# --- LangGraph (Session 3 & 4) ---
+langgraph
