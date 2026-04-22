@@ -1,15 +1,15 @@
 """
 ╔══════════════════════════════════════════════════════════════╗
-║  SESSION 2C (Part 1)  —  MCP Server                        ║
+║  SESSION 2C (Part 1)  —  MCP Server                          ║
 ╠══════════════════════════════════════════════════════════════╣
-║  This file IS the MCP Server — the "tool provider".        ║
-║  Think of it as a USB-C port: it exposes standardised       ║
-║  tools that ANY MCP-compatible agent can discover and use   ║
-║  automatically, without writing custom integration code.    ║
-║                                                             ║
-║  DO NOT run this file directly.                             ║
-║  The MCP client (demo_2c_mcp_client.py) starts it           ║
-║  automatically as a subprocess.                             ║
+║  This file IS the MCP Server — the "tool provider".          ║
+║  Think of it as a USB-C port: it exposes standardised        ║
+║  tools that ANY MCP-compatible agent can discover and use    ║
+║  automatically, without writing custom integration code.     ║
+║                                                              ║
+║  DO NOT run this file directly.                              ║
+║  The MCP client (demo_2c_mcp_client.py) starts it            ║
+║  automatically as a subprocess.                              ║
 ╚══════════════════════════════════════════════════════════════╝
 """
 
