@@ -1,7 +1,15 @@
 # ============================================================
 # Inbox Intelligence Agent — Dependencies
 # ============================================================
-# Install everything at once:   pip install -r requirements.txt
+# RECOMMENDED: Use the setup script to install inside a venv:
+#   Windows  →  setup.bat
+#   Mac/Linux→  bash setup.sh
+#
+# Manual install (inside an activated venv):
+#   python -m venv venv
+#   venv\Scripts\activate        (Windows)
+#   source venv/bin/activate     (Mac/Linux)
+#   pip install -r requirements.txt
 # ============================================================
 
 # --- Core Web Server ---

@@ -22,6 +22,8 @@ This repository is split into progressive sessions. By running each demo, you wi
 ```text
 ├── .env.example                          # Template for API keys
 ├── requirements.txt                      # Python dependencies
+├── setup.bat                             # One-click setup script (Windows)
+├── setup.sh                              # One-click setup script (Mac/Linux)
 ├── main.py                               # Web Dashboard (FastAPI baseline UI)
 │
 ├── utils/                                # Shared utilities
@@ -57,18 +59,47 @@ This repository is split into progressive sessions. By running each demo, you wi
 
 Follow these steps carefully to configure your environment before running the demos.
 
-### Step 1: Install Dependencies
-Open a terminal in the project directory and run:
+### Step 1: Clone the Repository
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/NaveenHuggi/Agentic-AI-Demo.git
+cd Agentic-AI-Demo
 ```
 
-### Step 2: Configure Environment Variables (.env)
+### Step 2: Create & Activate a Virtual Environment
+
+Using a virtual environment keeps all dependencies isolated and prevents conflicts with other Python projects on your machine.
+
+#### 🪟 Windows — one-click setup:
+```bash
+setup.bat
+```
+
+#### 🍎 Mac / 🐧 Linux — one-click setup:
+```bash
+bash setup.sh
+```
+
+> The scripts will automatically create a `venv/` folder, activate it, and install all dependencies from `requirements.txt`.
+
+**For future sessions**, re-activate the environment manually before running any scripts:
+```bash
+# Windows
+venv\Scripts\activate
+
+# Mac / Linux
+source venv/bin/activate
+```
+
+### Step 3: Configure Environment Variables (.env)
 This repository uses a high-throughput multiplexing router that load-balances across different AI providers. You don't need all of them, but you need at least one API key.
 
 1. **Copy the `.env.example` file** and rename it to `.env`.
    ```bash
+   # Windows
    copy .env.example .env
+
+   # Mac / Linux
+   cp .env.example .env
    ```
 2. **Add your API Keys** inside the `.env` file. You can generate free API keys from:
    - [Google AI Studio (Gemini)](https://aistudio.google.com/)
@@ -77,8 +108,8 @@ This repository uses a high-throughput multiplexing router that load-balances ac
 
 If you hit a rate limit on one provider, the system will seamlessly failover to the next!
 
-### Step 3: Google Workspace API Setup (credentials.json)
-This project actually reads your Gmail and can insert events into your Google Calendar. 
+### Step 4: Google Workspace API Setup (credentials.json)
+This project actually reads your Gmail and can insert events into your Google Calendar.
 *Note: Your data stays entirely local to your machine. The `.gitignore` ensures secrets are never pushed to GitHub.*
 
 1. Go to the [Google Cloud Console](https://console.cloud.google.com/) and create a new project.
@@ -87,7 +118,7 @@ This project actually reads your Gmail and can insert events into your Google Ca
 4. Go to **Credentials**, click **Create Credentials → OAuth client ID** (Choose "Desktop app").
 5. Click **Download JSON**, rename the downloaded file to exactly `credentials.json`, and place it in the root of this project folder.
 
-### Step 4: First-Time Authentication
+### Step 5: First-Time Authentication
 Run this one-liner to securely authenticate. A browser window will pop up asking you to sign in to your Google Account.
 ```bash
 python -c "from utils.auth import get_credentials; get_credentials()"

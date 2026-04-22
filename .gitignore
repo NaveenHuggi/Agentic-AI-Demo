@@ -30,6 +30,7 @@ venv/
 .venv/
 env/
 .env_venv/
+crewai-env/
 
 # Environment Variables & Secrets
 # NEVER COMMIT API KEYS
